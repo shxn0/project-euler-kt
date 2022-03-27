@@ -14,7 +14,7 @@ class PrimeNumber {
   fun isPrime(n: Long): Boolean {
     if (n <= 1) return false
     for (i in 2..n) {
-      if (i * i > n) return true //  nが入力値 iが割る数 ルートの数まで求めれば良いのでこの式でOK
+      if (i * i > n) break //  nが入力値 iが割る数 ルートの数まで求めれば良いのでこの式でOK
       if (n % i == 0L) return false
     }
     return true
