@@ -1,9 +1,5 @@
 package tips
 
-import java.math.BigDecimal
-import kotlin.math.roundToLong
-import kotlin.math.sqrt
-
 /**
  * 素数クラス
  * 1は素数に入らない
