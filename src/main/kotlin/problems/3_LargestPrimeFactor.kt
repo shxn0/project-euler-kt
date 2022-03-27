@@ -4,20 +4,23 @@ import algorithms.Euclid
 
 // https://projecteuler.net/problem=3
 fun main(args: Array<String>) {
-  var primes = mutableListOf<Long>()
-  val target = 13195L
+  val target = 600851475143L
 
-  for (i in 1..target){
-    if(isPrime(i)) primes.add(i)
-  }
-  println(primes)
-}
+  fun factorize(m: Long): MutableList<Long>{
+    var n = m
+    val factors = mutableListOf<Long>()
 
-fun isPrime(n: Long): Boolean {
-  if(n <= 1) return false
-  for (i in 2..n) {
-    if (i * i > n) return true
-    if(n % i == 0L) return false
+    for (i in 2L..n){
+      if(i * i > n) break
+      if(n % i == 0L){
+        factors.add(i)
+        while (n % i == 0L) n /= i
+      }
+    }
+    if(n > 1) factors.add(n)
+    return factors
   }
-  return true
+
+  val ans = factorize(target)
+  println(ans)
 }
