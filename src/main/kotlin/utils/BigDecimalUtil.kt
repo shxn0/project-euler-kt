@@ -1,4 +1,4 @@
-package com.playground.util
+package utils
 
 import java.math.BigDecimal
 
