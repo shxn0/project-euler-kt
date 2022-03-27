@@ -21,8 +21,7 @@ fun main(args: Array<String>) {
     return a / gcd(a, b) * b
   }
 
-  val results = mutableListOf<Long>()
-
+  // 1から20までの最小公倍数を求めていく
   var clm = 1L
   for (a in 1..20L) {
     clm = clm(a, clm)
