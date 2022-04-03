@@ -10,7 +10,7 @@ class Factor {
   // 素因数のリストを返却する
   fun factor(m: Long): List<Long> {
     var n = m
-    var res = mutableListOf<Long>()
+    val res = mutableListOf<Long>()
 
     for (i in 2L..m) {
       if (i * i > n) break // 平方根以上は求める必要ない
